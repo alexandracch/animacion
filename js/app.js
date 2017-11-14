@@ -5,55 +5,15 @@
 //puedo usar condicional if 
 //"si esta tecla es presonada=pasa esto // de lo contrario=queda donde estaba"
 
-/*var boton = document.getElementById("btn");
+//Variables
+/*primer obtengo la tabla*/ 
+  var tableAnimation =document.getElementById('tableAnimation')
+/*obtengo los td, pero como HTMLCollection*/ 
+  var circles =  tableAnimation.getElementsByTagName('td');
+/*Transformo a array*/
+  var arr = Array.from(circles);
 
-function showMenu (){
-    var menu = document.getElementById("opcs-menu");
-    //Para que se muestre
-    if (menu.classList.contains("disabled-menu")){
-    menu.classList.remove("disabled-menu");
-    menu.classList.add("enable-menu");
-    }
-    else {//Para que se oculte
-    menu.classList.remove("enabled-menu");
-    menu.classList.add("disabled-menu");
-    }
-}
-//Asociando el evento al botón
-boton.addEventListener("click",showMenu);*/
+  var i=1;
+  var j=1;
+  
 
-
-function moveKeyboard () {
-    var menu = document.getElementById("positionHere");
-    // para que se pinte
-    var keyX = 100;
-    var keyY = 100;
-    move_keyboard = function() {
-      /*noStroke();
-      fill(255,255,0);
-      ellipse(keyX,keyY,25,25);*/
-      if (keyPressed) {
-        if (key == CODED) {
-          if (keyCode == UP) /* { keyY-=1; }*/
-          {
-            positionHere
-          }
-          if (keyCode == DOWN) /* { keyY+=1; }*/
-         {
-            positionHere
-         } 
-          if (keyCode == LEFT) /* { keyX-=1; }*/
-          {
-            positionHere
-          }
-          if (keyCode == RIGHT) /*{ keyX+=1; }*/
-          {
-            positionHere
-          }
-        }
-      }
-    }
-}
-
-//asociando evento
-boton.addEventListener("click",showMenu);
