@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  table {
+    border-spacing: 15px;
+  }
+
+
+  .board td {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+  
+  .positionHere:active {
+    background-color: gray;
+  }
